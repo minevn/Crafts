@@ -1,0 +1,6 @@
+name: Crafts
+version: ${project.version}
+main: me.manaki.plugin.crafts.Crafts
+api-version: 1.16
+depend: [ Shops ]
+authors: [ MankaiStep ]
