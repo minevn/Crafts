@@ -4,3 +4,8 @@ main: me.manaki.plugin.crafts.Crafts
 api-version: 1.16
 depend: [ Shops ]
 authors: [ MankaiStep ]
+commands:
+  crafts:
+    description: Dit me may
+  khochetac:
+    description: Dit me may

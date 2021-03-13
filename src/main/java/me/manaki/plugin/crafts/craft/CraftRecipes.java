@@ -1,18 +1,16 @@
 package me.manaki.plugin.crafts.craft;
 
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
+import me.manaki.plugin.shops.storage.ItemStorage;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-
-import mk.plugin.niceshops.storage.ItemStorage;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class CraftRecipes {
 

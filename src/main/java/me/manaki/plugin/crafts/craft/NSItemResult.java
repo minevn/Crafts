@@ -1,9 +1,9 @@
 package me.manaki.plugin.crafts.craft;
 
+import me.manaki.plugin.shops.storage.ItemStorage;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import mk.plugin.niceshops.storage.ItemStorage;
 
 public class NSItemResult extends CraftResult {
 

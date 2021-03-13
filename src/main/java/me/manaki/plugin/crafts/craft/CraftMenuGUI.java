@@ -1,8 +1,10 @@
 package me.manaki.plugin.crafts.craft;
 
-import java.util.List;
-import java.util.Map;
-
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
+import me.manaki.plugin.crafts.Crafts;
+import me.manaki.plugin.crafts.main.ItemStackUtils;
+import me.manaki.plugin.crafts.main.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
@@ -12,12 +14,8 @@ import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-
-import me.manaki.plugin.crafts.main.Crafts;
-import me.manaki.plugin.crafts.main.ItemStackUtils;
-import me.manaki.plugin.crafts.main.Utils;
+import java.util.List;
+import java.util.Map;
 
 public class CraftMenuGUI {
 	

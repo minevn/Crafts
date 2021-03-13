@@ -2,6 +2,7 @@ package me.manaki.plugin.crafts.craft;
 
 import java.util.Map;
 
+import me.manaki.plugin.crafts.Crafts;
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
@@ -15,7 +16,6 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 import com.google.common.collect.Maps;
 
-import me.manaki.plugin.crafts.main.Crafts;
 import me.manaki.plugin.crafts.main.ItemStackUtils;
 import me.manaki.plugin.crafts.main.PointAPI;
 import me.manaki.plugin.crafts.main.Utils;

@@ -3,8 +3,8 @@ package me.manaki.plugin.crafts.craft;
 import java.util.List;
 import java.util.Map;
 
+import me.manaki.plugin.crafts.Crafts;
 import org.bukkit.Bukkit;
-import org.bukkit.DyeColor;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
@@ -18,7 +18,6 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 import me.manaki.plugin.crafts.event.ItemCraftEvent;
-import me.manaki.plugin.crafts.main.Crafts;
 import me.manaki.plugin.crafts.main.ItemStackUtils;
 import me.manaki.plugin.crafts.main.MoneyAPI;
 import me.manaki.plugin.crafts.main.Utils;

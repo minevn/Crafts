@@ -1,0 +1,13 @@
+gui:
+  gui1:
+    size: 9
+    recipes:
+    - recipe1;0
+
+craft:
+  recipe1:
+    fee: 1000
+    wait: 10
+    from:
+    - EMERALD;10
+    result: STONE

@@ -1,5 +1,6 @@
 package me.manaki.plugin.crafts.command;
 
+import me.manaki.plugin.crafts.craft.CraftMenuGUI;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -30,6 +31,10 @@ public class AdminCommand implements CommandExecutor {
 					Player player = Bukkit.getPlayer(args[2]);
 					CraftStorageGUI.open(player);
 				}
+				else if (args[1].equalsIgnoreCase("menu")) {
+					Player player = Bukkit.getPlayer(args[2]);
+					CraftMenuGUI.open(args[3], player);
+				}
 			}
 		}
 		catch (ArrayIndexOutOfBoundsException e) {
@@ -42,6 +47,7 @@ public class AdminCommand implements CommandExecutor {
 	}
 	
 	public void sendHelp(CommandSender sender) {
+		sender.sendMessage("§a/crafts gui menu <*player> <*id>");
 		sender.sendMessage("§a/crafts gui craft <*player> <*id>");
 		sender.sendMessage("§a/crafts gui storage <*player>");
 	}

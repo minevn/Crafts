@@ -89,7 +89,7 @@
         </dependency>
         <dependency>
             <groupId>minevn.depend</groupId>
-            <artifactId>NiceShops</artifactId>
+            <artifactId>Shops</artifactId>
             <version>1.0</version>
             <scope>provided</scope>
         </dependency>
