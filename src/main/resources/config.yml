@@ -2,6 +2,7 @@ gui:
   gui1:
     size: 9
     recipes:
+    # Ghi - recipe 0 cũng được (xóa dấu ; thay bằng dấu cách)
     - recipe1;0
 
 craft:
@@ -9,5 +10,6 @@ craft:
     fee: 1000
     wait: 10
     from:
+    # Ghi - EMERALD 0 cũng được (xóa dấu ; thay bằng dấu cách)
     - EMERALD;10
     result: STONE

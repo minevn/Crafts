@@ -24,7 +24,9 @@ public class CraftRecipes {
 			List<ItemStack> from = Lists.newArrayList();
 			List<Integer> amounts = Lists.newArrayList();
 			config.getStringList("craft." + id + ".from").forEach(s -> {
-				int amount = Integer.valueOf(s.split(";")[1]);
+				var split = ";";
+				if (s.contains(" ")) split = " ";
+				int amount = Integer.valueOf(s.split(split)[1]);
 				
 				do {
 					int ta = amount % 64 == 0 ? 64 : amount % 64;
@@ -55,7 +57,13 @@ public class CraftRecipes {
 			CraftMenuGUI.menus.clear();
 			config.getConfigurationSection("gui").getKeys(false).forEach(gid -> {
 				int size = config.getInt("gui." + gid + ".size");
-				List<CraftMenuIcon> icons = config.getStringList("gui." + gid + ".recipes").stream().map(s -> new CraftMenuIcon(s.split(";")[0], Integer.valueOf(s.split(";")[1]))).collect(Collectors.toList());
+				List<CraftMenuIcon> icons = Lists.newArrayList();
+				for (String s : config.getStringList("gui." + gid + ".recipes")) {
+					var split = ";";
+					if (s.contains(" ")) split = " ";
+					var cmi = new CraftMenuIcon(s.split(split)[0], Integer.parseInt(s.split(split)[1]));
+					icons.add(cmi);
+				}
 				CraftMenu menu = new CraftMenu(size, icons);
 				CraftMenuGUI.menus.put(gid, menu);
 			});
