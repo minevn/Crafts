@@ -29,7 +29,7 @@ public class CraftMenuGUI {
 		player.playSound(player.getLocation(), Sound.BLOCK_CHEST_OPEN, 1, 1);
 		
 		Bukkit.getScheduler().runTaskAsynchronously(Crafts.get(), () -> {
-			for (int i = 0 ; i < inv.getSize() ; i++) inv.setItem(i, Utils.getBlackSlot());
+			for (int i = 0 ; i < inv.getSize() ; i++) inv.setItem(i, Utils.getBack());
 			menu.icons.forEach(icon -> {
 				inv.setItem(icon.getSlot(), getIcon(icon.getRecipeID()));
 			});

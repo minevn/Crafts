@@ -31,7 +31,7 @@ public class CraftRecipes {
 				do {
 					int ta = amount % 64 == 0 ? 64 : amount % 64;
 					amount -= ta;
-					ItemStack is = ItemStorage.get(s.split(";")[0]);
+					ItemStack is = ItemStorage.get(s.split(split)[0]);
 					is.setAmount(ta);
 					from.add(is);
 					amounts.add(ta);

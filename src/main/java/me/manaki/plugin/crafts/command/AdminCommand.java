@@ -1,5 +1,6 @@
 package me.manaki.plugin.crafts.command;
 
+import me.manaki.plugin.crafts.Crafts;
 import me.manaki.plugin.crafts.craft.CraftMenuGUI;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -21,7 +22,11 @@ public class AdminCommand implements CommandExecutor {
 		}
 		
 		try {
-			if (args[0].equalsIgnoreCase("gui")) {
+			if (args[0].equalsIgnoreCase("reload")) {
+				Crafts.get().reloadConfig();
+				sender.sendMessage("§aAll done!");
+			}
+			else if (args[0].equalsIgnoreCase("gui")) {
 				if (args[1].equalsIgnoreCase("craft")) {
 					Player player = Bukkit.getPlayer(args[2]);
 					String rID = args[3];
@@ -47,6 +52,7 @@ public class AdminCommand implements CommandExecutor {
 	}
 	
 	public void sendHelp(CommandSender sender) {
+		sender.sendMessage("§a/crafts reload");
 		sender.sendMessage("§a/crafts gui menu <*player> <*id>");
 		sender.sendMessage("§a/crafts gui craft <*player> <*id>");
 		sender.sendMessage("§a/crafts gui storage <*player>");
