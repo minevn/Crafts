@@ -88,7 +88,7 @@ public class CraftRecipeGUI {
 		if (CraftRecipes.canBypass(player, id)) {
 			CraftStorages.add(player, id, System.currentTimeMillis() + 1000);
 		}
-		else CraftStorages.add(player, id, System.currentTimeMillis() + CraftRecipes.get(id).getWait() * 1000);
+		else CraftStorages.add(player, id, System.currentTimeMillis() + CraftRecipes.get(id).getWait() * 1000L);
 		
 		// Call event
 		Bukkit.getPluginManager().callEvent(new ItemCraftEvent(player, id));

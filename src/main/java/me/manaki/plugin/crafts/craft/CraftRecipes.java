@@ -155,7 +155,7 @@ public class CraftRecipes {
 	}
 	
 	public static boolean canBypass(Player player, String id) {
-		return player.hasPermission("skycore.craft.bypass." + id);
+		return player.hasPermission("crafts.bypass." + id) || player.hasPermission("crafts.bypass");
 	}
 
 }
