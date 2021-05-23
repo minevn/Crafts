@@ -52,7 +52,7 @@ public class CraftRecipeGUI {
 			inv.setItem(TO_SLOT, getToIcon(cr.getResult().getItem()));
 			
 			// Load button
-			inv.setItem(BUTTON_SLOT, getButton(CraftRecipes.canCraft(player, recipeID), player, cr.getFee(), CraftRecipes.canBypass(player, recipeID)));
+			inv.setItem(BUTTON_SLOT, getButton(CraftRecipes.canCraft(player, recipeID), player, cr.getFee(), false));
 		});
 	}
 	
@@ -74,11 +74,9 @@ public class CraftRecipeGUI {
 		if (!CraftRecipes.canCraft(player, id)) return;
 		
 		// Fee
-		if (!CraftRecipes.canBypass(player, id)) {
-			if (!MoneyAPI.moneyCost(player, CraftRecipes.get(id).getFee())) {
-				player.sendMessage("§cBạn không đủ khả năng chi trả để chế tác");
-				return;
-			}
+		if (!MoneyAPI.moneyCost(player, CraftRecipes.get(id).getFee())) {
+			player.sendMessage("§cBạn không đủ khả năng chi trả để chế tác");
+			return;
 		}
 		
 		// Take and add to storage
