@@ -106,7 +106,7 @@ public class CraftRecipeGUI {
 	}
 	
 	private static ItemStack getButton(boolean canCraft, Player player, int fee, boolean canBypass) {
-		ItemStack is = canCraft ? new ItemStack(Material.GREEN_CONCRETE) : new ItemStack(Material.RED_CONCRETE);
+		ItemStack is = canCraft ? new ItemStack(Material.CONCRETE, 1, (short) 5) : new ItemStack(Material.CONCRETE, 1, (short) 14);
 		String name = canCraft ? "§a§lCó thể chế tác" : "§c§lKhông thể chế tác";
 		ItemStackUtils.setDisplayName(is, name);
 		

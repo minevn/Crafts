@@ -22,7 +22,7 @@ public class Utils {
 	}
 	
 	public static ItemStack getBlackSlot() {
-		ItemStack other = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
+		ItemStack other = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 15);
 		ItemMeta meta = other.getItemMeta();
 		meta.setDisplayName(" ");
 		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -31,10 +31,9 @@ public class Utils {
 	}
 
 	public static ItemStack getBack() {
-		ItemStack other = new ItemStack(Material.GLASS_PANE);
+		ItemStack other = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 15);
 		ItemMeta meta = other.getItemMeta();
 		meta.setDisplayName(" ");
-		meta.setCustomModelData(1);
 		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		other.setItemMeta(meta);
 		return other;

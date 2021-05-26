@@ -92,7 +92,7 @@ public class CraftStorageGUI {
 		cs.remove(cc);
 		CraftStorages.save(player, cs);
 		player.sendMessage("§aNhận vật phẩm chế tác thành công");
-		player.playSound(player.getLocation(), Sound.ENTITY_FIREWORK_ROCKET_LAUNCH, 1, 1);
+		player.playSound(player.getLocation(), Sound.ENTITY_FIREWORK_LAUNCH, 1, 1);
 
 		// Close and reopen
 		open(player);
