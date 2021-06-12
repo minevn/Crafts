@@ -42,7 +42,7 @@ public class CraftStorageGUI {
 			
 			@Override
 			public void run() {
-				if (player.getOpenInventory() == null || player.getOpenInventory().getTopInventory().getHolder() instanceof CSGHolder == false) {
+				if (player.getOpenInventory().getTopInventory() != inv) {
 					this.cancel();
 					return;
 				}
