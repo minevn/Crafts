@@ -30,7 +30,7 @@ public class AdminCommand implements CommandExecutor {
 				if (args[1].equalsIgnoreCase("craft")) {
 					Player player = Bukkit.getPlayer(args[2]);
 					String rID = args[3];
-					CraftRecipeGUI.open(player, rID);
+					CraftRecipeGUI.open(null, player, rID);
 				}
 				else if (args[1].equalsIgnoreCase("storage")) {
 					Player player = Bukkit.getPlayer(args[2]);

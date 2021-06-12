@@ -47,10 +47,11 @@ public class CraftMenuGUI {
 		// Check slot
 		int slot = e.getSlot();
 		Player player = (Player) e.getWhoClicked();
+		player.playSound(player.getLocation(), Sound.BLOCK_WOODEN_BUTTON_CLICK_ON, 1, 1);
 		for (CraftMenuIcon icon : menu.icons) {
 			if (icon.getSlot() == slot) {
 				String rid = icon.getRecipeID();
-				CraftRecipeGUI.open(player, rid);
+				CraftRecipeGUI.open(id, player, rid);
 			}
 		}
 	}
