@@ -111,7 +111,7 @@ public class CraftRecipeGUI {
 		Bukkit.getPluginManager().callEvent(new ItemCraftEvent(player, id));
 		
 		// Noti
-		player.sendMessage("§f§l>> §aGhi §f/khochetac §ađể xem vật phẩm của bạn");
+		player.sendMessage("§f§l>> §aGhi §f§l/khochetac §ađể xem vật phẩm của bạn");
 		player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_PLACE, 1, 1);
 		
 		// Reopen
@@ -155,12 +155,21 @@ public class CraftRecipeGUI {
 	}
 	
 	private static ItemStack getToIcon(ItemStack is) {
-		ItemStackUtils.setDisplayName(is, ItemStackUtils.getName(is) + " §7§o(Sản phẩm)");
+		ItemStackUtils.setDisplayName(is, ItemStackUtils.getName(is) + " §7§l§o(Sản phẩm)");
 		return is;
 	}
 	
 	private static ItemStack getFromIcon(ItemStack is, Player player) {
-		ItemStackUtils.setDisplayName(is, ItemStackUtils.getName(is) + "§o (" + CraftRecipes.count(player, is) + "/" + is.getAmount() + ")");
+		int total = is.getAmount();
+		int has = CraftRecipes.count(player, is);
+		int sub = total - has;
+
+		ItemStackUtils.addLoreLine(is, "");
+		ItemStackUtils.addLoreLine(is, "§aSố lượng: §f§l" + CraftRecipes.count(player, is) + "§f/§f§l" + is.getAmount());
+		if (sub > 0) {
+			ItemStackUtils.addLoreLine(is, "§cThiếu §f§l" + sub + "§c để chế tác");
+		}
+
 		return is;
 	}
 
